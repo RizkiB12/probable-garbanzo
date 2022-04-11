@@ -9,7 +9,7 @@ function onRequest(req, res) {
     res.setHeader("Content-Type", "text/html");
     switch (req.url) {
         case "/" || "":
-            req.url = "/index.example.html";
+            req.url = "/index.html";
             break;
         case "/cars":
             req.url = "/cars.html";

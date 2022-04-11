@@ -86,22 +86,21 @@ async function loadCarList() {
 
 const displayCarList = (cars) => {
     const html = cars.map((car) => {
-        return `
-        <div>
-            <div> id car : ${car.id}</div>
-            <div> plate car : ${car.plate}</div>
-            <div> rent car : ${car.rentPerDay}</div>
-            <div style="color: red; font-weight: bold;">available : ${car.available}</div>
-            <img src="${car.image}" alt="" width="250px">
-            <div> model : ${car.model}</div>
-            <div> manufcature : ${car.manufacture}</div>
-            <div> model : ${car.model}</div>
-            <div> capacity : ${car.capacity}</div>
-            <div> available at : ${car.availableAt}</div>
-            <div> description : ${car.description}</div>
+        return `   
+        <div class="col-md-4">
+        <div class="card">
+          <img src="${car.image}" class="card-img-top" alt="gambar mobil">
+          <div class="card-body">
+            <h6 class="card-text">${car.manufacture}-${car.model}</h6>
+            <h5 class="card-title">${car.rentPerDay}</h5>
+            <p class="card-text">${car.description}</p>
+            <p><img src="/images/fi_users.svg" alt="user"> ${car.capacity}</p>
+            <p><img src="/images/fi_settings.svg" alt="settings"> ${car.transmission}</p>
+            <p><img src="/images/fi_calendar.svg" alt="calender"> ${car.year}</p>
+            <a href="#" class="btn btn-success">Pilih Mobil</a>
+          </div>
         </div>
-        <hr>
-        `;
+      </div>`;
     }).join('')
     carlist.innerHTML = html;
 }

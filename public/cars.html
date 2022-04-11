@@ -6,32 +6,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Cars</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
-    <h1>Get Cars Page</h1>
+    <!---navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mx-5">
+          <li class="nav-item">
+            <a class="nav-link" href="#service" style="color: black;">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#whyus" style="color: black;">Why Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimoni" style="color: black;">Testimonial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq" style="color: black;">FAQ</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html" style="color: black;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-success" href="#">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </nav>
 
-    <label for="tipedriver">Tipe Driver</label>
-    <select name="" id="tipedriver">
-        <option value="" selected disabled>Pilih tipe driver</option>
-        <option value="">Dengan Driver</option>
-        <option value="">Tanpa Driver</option>
-    </select>
+  <!--jumbotron-->
+  <section id="jumbo">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row mb-5 mt-5">
+          <div class="col-md m-auto">
+            <h2 class="text-justify">Sewa & Rental Mobil Terbaik di Kawasan (Lokasimu)</h2>
+            <p>Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau.
+              Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
+            <a class="btn btn-success" href="#">Mulai Sewa Mobil</a>
+          </div>
+          <div class="col-md">
+            <img src="images/img_car.svg" class="img-fluid imgcar" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <label for="date">Tanggal</label>
-    <input type="date" id="dateSelect">
+ 
+ <!-- Search Section -->
+ <section>
+ <div class="container bg-secondary">
+    <div class="rounded p-3 row justify-content-evenly bg-light">
+      <div class="col-md-2 mb-3">
+        <label for="" class="form-label">Tipe Driver</label>
+        <select id="tipedriver" class="form-select">
+          <option value="" selected disabled>Pilih tipe driver</option>
+          <option value="1">Dengan Sopir</option>
+          <option value="2">Tanpa Sopir</option>
+        </select>
+      </div>
+      <div class="col-md-2 mb-3">
+        <label for="date" class="form-label">Tanggal</label>
+        <input type="date" class="form-control" id="dateSelect" placeholder="Pilih Tanggal">
+      </div>
+      <div class="col-md-2 mb-3">
+        <label for="" class="form-label">Waktu Jemput/Ambil</label>
+          <input type="time" class="form-control" id="timeSelect" placeholder="Pilih Waktu">
+      </div>
+      <div class="col-md-2 mb-3">
+        <label for="" class="form-label">Jumlah Penumpang</label>
+        <div class="input-group">
+        <input type="number" class="form-control" id="searchCapacity" placeholder="Jumlah Penumpang">
+        <span class="input-group-text bg-light"><img src="/images/people.svg" alt="people"></span>
+        </div>
+      </div>
+      <div class="col-md-2 mt-auto">
+        <button id="buttonSearch" class="btn btn-success mb-3" type="submit">Cari Mobil</button>
+      </div>
+    </div>
+  </div>
+  </section>
 
-    <label for="date">Jam</label>
-    <select name="" id="timeSelect"></select>
-
-    <label for="date">Kapasitas</label>
-    <input type="text" id="searchCapacity">
-
-    <button id="buttonSearch">Search</button>
-
-    <div id="carlist"></div>
+  <!-- Service Section -->
+    <section id="service">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-center">Our Services</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+          </div>
+        </div>
+          <div id="carlist" class="row">
+          </div>
+      </div>
+    </section>
 </body>
 
 <script type="text/javascript" src="./scripts/binar.js"></script>
