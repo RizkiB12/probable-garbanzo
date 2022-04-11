@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Cars</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Get Cars Page</h1>
+
+    <label for="tipedriver">Tipe Driver</label>
+    <select name="" id="tipedriver">
+        <option value="" selected disabled>Pilih tipe driver</option>
+        <option value="">Dengan Driver</option>
+        <option value="">Tanpa Driver</option>
+    </select>
+
+    <label for="date">Tanggal</label>
+    <input type="date" id="dateSelect">
+
+    <label for="date">Jam</label>
+    <select name="" id="timeSelect"></select>
+
+    <label for="date">Kapasitas</label>
+    <input type="text" id="searchCapacity">
+
+    <button id="buttonSearch">Search</button>
+
+    <div id="carlist"></div>
+</body>
+
+<script type="text/javascript" src="./scripts/binar.js"></script>
+<script type="text/javascript" src="./scripts/app.example.js"></script>
+<script type="text/javascript" src="./scripts/car.example.js"></script>
+<script type="text/javascript" src="./scripts/app.js"></script>
+
+</html>

@@ -9,8 +9,8 @@ class App {
     await this.load();
 
     // Register click listener
-    this.clearButton.onclick = this.clear;
-    this.loadButton.onclick = this.run;
+   // this.clearButton.onclick = this.clear;
+    //this.loadButton.onclick = this.run;
   }
 
   run = () => {
